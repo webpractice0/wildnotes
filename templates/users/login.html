@@ -1,0 +1,32 @@
+{% include '_base.html' %}
+{% load static %}
+{% block title %}
+<title>Wildnotes | Login</title>
+{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="row my-4">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="rounded border border-secondary p-2 mt-4">
+          <h3 class="text-center text-secondary my-4">Wildnotes | Sign In</h3>
+        {% include '_messages.html' %}
+        <form action="" method="post">
+          {% csrf_token %}
+          <div class="form-group">
+            <input class="form-control" type="text" name="email" id="email" placeholder="Email">
+          </div>
+          <div class="form-group my-3">
+            <input class="form-control" type="password" name="password" id="password" placeholder="Password">
+          </div>
+          <button type="submit" class="mb-4 btn btn-warning">Submit</button>
+        </form>
+        <a href="{% url 'userregister' %}" class="text-secondary text-info">Not a member? Sign up!</a> |
+        <a href="{% url 'password_reset' %}" class="text-secondary text-info">Forgot password?</a>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+
+</div>
+{% endblock %}

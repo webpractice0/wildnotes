@@ -1,0 +1,1 @@
+web: gunicorn wildnotes.wsgi --log-file -
