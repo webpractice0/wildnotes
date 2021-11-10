@@ -1,12 +1,23 @@
-{% include '_base.html' %}
-
-{% load static %}
-{% block title %}
+{% include '_base.html' %} {% load static %} {% block title %}
 <title>Wildnotes | Home</title>
-{% endblock  %}
-{% block content %}
+{% endblock %} {% block content %}
 <div class="container my-4">
-    {% include '_messages.html' %}
-<p>Blogs</p>
+<div class="row">
+  {% include '_messages.html' %} {% for blog in all_blogs %}
+  <div class="card col-md-3"  style="width: 90%">
+    <img src={{blog.image.url}} class="card-img-top" style="width: 200px; margin-top: 20px; margin-left: 20px" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{blog.title}}</h5>
+      <p class="card-text">
+        {{blog.description}}
+      </p>
+      <p class="card-text">
+        {{blog.created_on}}
+      </p>
+      <a href="#" class="btn btn-primary">Read More</a>
+    </div>
+  </div>
+  {% endfor %}
+  </div>
 </div>
-{% endblock  %}
+{% endblock %}
