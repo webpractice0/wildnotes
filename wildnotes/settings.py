@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'helpers',
     'api',
     'rest_framework',
-    'corsheaders'
+    'corsheaders',
+    'miscellaneous'
 
 ]
 
