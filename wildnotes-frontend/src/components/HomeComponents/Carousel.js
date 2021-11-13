@@ -64,8 +64,8 @@ const Carousel = () => {
               alt={element.image_alt}
             />
             <div className="carousel-caption d-none d-md-block">
-              <h5 style={{textShadow:'2px 2px black'}}>{element.main_text}</h5>
-              <p style={{textShadow:'2px 2px black'}}>{element.sub_text}</p>
+              <h5 style={{textShadow:'1px 2px 4px black'}}>{element.main_text}</h5>
+              <p style={{textShadow:'1px 2px 4px black'}}>{element.sub_text}</p>
             </div>
           </div>
           })}
