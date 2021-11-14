@@ -1,8 +1,6 @@
 import React from 'react'
 import { Container, Grid, Button, Card, CardHeader, CardMedia, CardContent, CardActions, Avatar, IconButton, Typography } from '@mui/material'
-import { Link } from 'react-router-dom'
-
-// import {FavoriteIcon, ShareIcon} from '@mui/icons-material'
+import { NavLink } from 'react-router-dom'
 
 
 import { red } from '@mui/material/colors'
@@ -30,16 +28,7 @@ const NotesList = () => {
                      </Typography>
                   </CardContent>
                   <CardActions disableSpacing>
-                     <IconButton aria-label="add to favorite">
-                        {/* <FavoriteIcon /> */}
-                        <Button>
-                           <Link to='/'><Typography>
-                              Read more
-                           </Typography></Link>
-
-                        </Button>
-
-                     </IconButton>
+                  <NavLink to='/note/1' style={{padding:'0px 8px'}}>Read More</NavLink>
                   </CardActions>
                </Card>
             </Grid>
@@ -61,16 +50,7 @@ const NotesList = () => {
                      </Typography>
                   </CardContent>
                   <CardActions disableSpacing>
-                     <IconButton aria-label="add to favorite">
-                        {/* <FavoriteIcon /> */}
-                        <Button>
-                           <Link to='/'><Typography>
-                              Read more
-                           </Typography></Link>
-
-                        </Button>
-
-                     </IconButton>
+                  <NavLink to='/note/2' style={{padding:'0px 8px'}}>Read More</NavLink>
                   </CardActions>
                </Card>
             </Grid>
@@ -92,16 +72,7 @@ const NotesList = () => {
                      </Typography>
                   </CardContent>
                   <CardActions disableSpacing>
-                     <IconButton aria-label="add to favorite">
-                        {/* <FavoriteIcon /> */}
-                        <Button>
-                           <Link to='/'><Typography>
-                              Read more
-                           </Typography></Link>
-
-                        </Button>
-
-                     </IconButton>
+                  <NavLink to='/note/3' style={{padding:'0px 8px'}}>Read More</NavLink>
                   </CardActions>
                </Card>
             </Grid>

@@ -8,6 +8,7 @@ class BlogPost(BaseModel):
    description = models.TextField()
    image = models.ImageField(upload_to='static/images/', blank=True, null=True)
    author = models.ForeignKey(UserModel(), on_delete=models.CASCADE)
+   author_pic = models.ImageField(upload_to='static/images/author/', blank=True, null=True)
 
    def __str__(self) -> str:
        return str(self.title) + ' by: '+str(self.author)
