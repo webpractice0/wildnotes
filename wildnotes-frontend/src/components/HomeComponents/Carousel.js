@@ -21,26 +21,6 @@ const Carousel = () => {
         data-bs-ride="carousel"
       >
         <div className="carousel-indicators">
-          {/* <button
-            type="button"
-            data-bs-target="#wildotesCarousel"
-            data-bs-slide-to="0"
-            className="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#wildotesCarousel"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#wildotesCarousel"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button> */}
           {carouselImages.map((element, index) => {
             return (
               <button
@@ -59,9 +39,10 @@ const Carousel = () => {
             
             return <div className={index === 0?'carousel-item active':'carousel-item'}  data-bs-interval="2000">
             <img
-              src={element.image_url}
+              src={element.image}
               className="d-block w-70"
               alt={element.image_alt}
+              style={{width: '400px'}}
             />
             <div className="carousel-caption d-none d-md-block">
               <h5 style={{textShadow:'1px 2px 4px black'}}>{element.main_text}</h5>

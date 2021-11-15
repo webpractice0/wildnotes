@@ -21,7 +21,7 @@ const BlogExcerpt = () => {
         return <React.Fragment>
            <ListItem alignItems="flex-start">
         <ListItemAvatar>
-           <Avatar alt="Author pic" src={element.image}/>
+           <Avatar alt="Author Pic" src={element.slug}/>
         </ListItemAvatar>
         <ListItemText primary={element.title}secondary={            
            <React.Fragment>
