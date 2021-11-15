@@ -4,7 +4,6 @@ const PopularNotes = () => {
    return (
       <div>
          <span className="wildnotes-title-style">Most read notes</span>
-         {/* <hr /> */}
          <BlogExcerpt />
       </div>
    )

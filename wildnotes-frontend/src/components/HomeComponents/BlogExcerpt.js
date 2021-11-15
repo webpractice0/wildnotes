@@ -6,37 +6,6 @@ import {
 import axios from 'axios';
 
 const BlogExcerpt = () => {
-   const blogData = [
-      {
-         'title':'First Blog Ever',
-         'description':'The first blog ever in my entire life.',
-         'author':'Harun Rai',
-         'author_pic':author_pic
-
-      },
-      {
-         'title':'Second Blog Ever',
-         'description':'The Second blog ever in my entire life.',
-         'author':'Misile Rai',
-         'author_pic':author_pic
-
-      },
-      {
-         'title':'Third Blog Ever',
-         'description':'The third blog ever in my entire life.',
-         'author':'Ritika Giri',
-         'author_pic':author_pic
-
-      },
-      {
-         'title':'Fourth Blog Ever',
-         'description':'The fourth blog ever in my entire life.',
-         'author':'Selena Gomez',
-         'author_pic':author_pic
-
-      }
-   ]
-   // console.log('Data: ', blogData)
    const [blogPosts, setBlogPosts] = useState([])
 
    useEffect(() => {
@@ -52,7 +21,7 @@ const BlogExcerpt = () => {
         return <React.Fragment>
            <ListItem alignItems="flex-start">
         <ListItemAvatar>
-           <Avatar alt="Author pic" src={element.image}/>
+           <Avatar alt="Author Pic" src={element.slug}/>
         </ListItemAvatar>
         <ListItemText primary={element.title}secondary={            
            <React.Fragment>
@@ -61,7 +30,7 @@ const BlogExcerpt = () => {
            </React.Fragment>   
         } />
      </ListItem>
-     {blogData.length !== index+1 | index===0?<Divider variant="inset" component="li"/>:''}
+     {blogPosts.length !== index+1 | index===0?<Divider variant="inset" component="li"/>:''}
      </React.Fragment>
    }
       )}
