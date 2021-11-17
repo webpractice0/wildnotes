@@ -4,6 +4,7 @@ import {
    List, ListItem, Divider, ListItemText, ListItemAvatar, Avatar, Typography
 } from '@mui/material';
 import axios from 'axios';
+import { NavLink, Link } from 'react-router-dom';
 
 const BlogExcerpt = () => {
    const [blogPosts, setBlogPosts] = useState([])
@@ -21,14 +22,16 @@ const BlogExcerpt = () => {
         return <React.Fragment>
            <ListItem alignItems="flex-start">
         <ListItemAvatar>
-           <Avatar alt="Author Pic" src={element.slug}/>
+           <Avatar alt="Author Pic" src={element.author_pic}/>
         </ListItemAvatar>
+        <NavLink to={`/note/${element.uid}/view/`}>
         <ListItemText primary={element.title}secondary={            
            <React.Fragment>
               <b>{element.author} - </b>
-              {element.description}
+              {element.briefed_description}
            </React.Fragment>   
         } />
+        </NavLink>
      </ListItem>
      {blogPosts.length !== index+1 | index===0?<Divider variant="inset" component="li"/>:''}
      </React.Fragment>

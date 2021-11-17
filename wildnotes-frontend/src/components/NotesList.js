@@ -5,7 +5,6 @@ import { NavLink } from 'react-router-dom'
 import axios from 'axios'
 import { red } from '@mui/material/colors'
 
-import NotesImage from '../images/2.jpeg';
 const NotesList = () => {
    const [notes, setNotes] = useState([])
 
@@ -35,7 +34,7 @@ const NotesList = () => {
 
                   <CardContent>
                      <Typography variant="body" color="text.secondary">
-                        {element.description}
+                        {element.briefed_description}
                      </Typography>
                   </CardContent>
                   <CardActions disableSpacing>

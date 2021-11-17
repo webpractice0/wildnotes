@@ -25,4 +25,6 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('api/', include('api.urls')),
     path('api/misc/', include('miscellaneous.urls')),
+    path('api/auth/', include('djoser.urls')),
+    path('api/auth/', include('djoser.urls.jwt')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

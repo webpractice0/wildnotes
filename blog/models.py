@@ -16,3 +16,7 @@ class BlogPost(BaseModel):
     @property
     def custom_datetime(self):
         return self.created_on.strftime('%Y-%m-%d %H:%m')
+
+    @property
+    def briefed_description(self):
+        return ' '.join(self.description.split()[:20]) +' ...'
